@@ -1,4 +1,4 @@
-name: Publish to Cargo
+name: Publish to Cgo
 
 on:
   push:
@@ -11,7 +11,7 @@ jobs:
     name: 'publish'
 
     # Reference your environment variables
-    environment: cargo
+    environment: cgo
 
     steps:
       - uses: actions/checkout@master
@@ -23,7 +23,7 @@ jobs:
         env:
           cache-name: cache-publish-action
         with:
-          path: ~/.cargo
+          path: ~/.cgo
           key: ${{ runner.os }}-build-${{ env.cache-name }}
 
       # install publish-action by cargo in github action
