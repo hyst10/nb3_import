@@ -55,7 +55,7 @@ async fn main() -> Result<(), sqlx::Error>{
     if tables.len() > 0 {
         println!("解析nb3文件成功！!!,需要导入的表有{}个",tables.len());
     } else {
-        println!("解析nb3文件失败！");
+        println!("解析nb3文件失败！！！");
         return Ok(());
     }
     let mut url = String::new();
